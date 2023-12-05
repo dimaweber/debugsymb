@@ -138,6 +138,15 @@ Program terminated with signal SIGSEGV, Segmentation fault.
     init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffdb2dbadd8)
     at ../csu/libc-start.c:360
 #5  0x000055cfabddb1e5 in ?? ()
+
+(gdb) frame 0
+#0  0x00007fa554f82c5b in globalFunc(int) () from /home/weber/projects/t/out/lib/libclass.so
+
+(gdb) frame 1
+#1  0x00007fa554f74f18 in A::run() () from /home/weber/projects/t/out/lib/libclass.so
+
+(gdb) frame 2
+#2  0x00005628c2f1317a in ?? ()
 ```
 #### load app symbols
 ```
@@ -168,12 +177,19 @@ Reading symbols from out/symbols/class.ds...
     at /home/weber/projects/t/src/lib/class/class_lib.cpp:24
 #2  0x000055cfabddb17a in main () at /home/weber/projects/t/src/app/main.cpp:10
 
-(gdb) f 1
+(gdb) frame 1
 #1  0x00007f3768553f18 in A::run (this=this@entry=0x7ffdb2dbacb4)
     at /home/weber/projects/t/src/lib/class/class_lib.cpp:24
 24              step( );
 
-(gdb) f 2
+(gdb) frame 2
 #2  0x000055cfabddb17a in main () at /home/weber/projects/t/src/app/main.cpp:10
 10          obj.run( );
+
+(gdb) frame 0
+#0  globalFunc (v=1) at /home/weber/projects/t/src/lib/global/global_lib.cpp:10
+10          *p = v;
+
+(gdb) print p
+$3 = (int *) 0x0
 ```

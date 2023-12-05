@@ -1,1 +1,1 @@
-int* globalFunc (int v );
+int* globalFunc (int v = 0 );

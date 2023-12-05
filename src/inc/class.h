@@ -7,5 +7,4 @@ public:
     A( );
     ~A( );
     void run( );
-
 };
