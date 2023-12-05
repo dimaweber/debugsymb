@@ -15,18 +15,9 @@ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 include_directories(src/inc)
 
-set(SYMBOLS_BINARY_PATH ${CMAKE_BINARY_DIR}/symbols)
-file(MAKE_DIRECTORY ${SYMBOLS_BINARY_PATH})
-function (create_ds target)
-    set (TARGET_DS ${SYMBOLS_BINARY_PATH}/${target}.${DEBUG_SYMBOL_SUFFIX})
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-    add_custom_command(TARGET ${TARGET} POST_BUILD
-            COMMAND ${CMAKE_OBJCOPY} --only-keep-debug $<TARGET_FILE:${target}> ${TARGET_DS}
-            COMMAND ${CMAKE_STRIP} $<TARGET_FILE:${target}>
-            COMMAND ${CMAKE_OBJCOPY} --add-gnu-debuglink=${TARGET_DS} $<TARGET_FILE:${target}>
-    )
-endfunction()
-install(DIRECTORY ${SYMBOLS_BINARY_PATH} TYPE INFO)
+include(DebugSymbols)
 
 add_subdirectory(src/app)
 add_subdirectory(src/lib)
