@@ -3,8 +3,6 @@ project(debugsymb LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set (DEBUG_SYMBOL_SUFFIX ds)
-
 include(GNUInstallDirs)
 set(CMAKE_INSTALL_BINDIR out/bin)
 set(CMAKE_INSTALL_LIBDIR out/lib)

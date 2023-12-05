@@ -1,3 +1,4 @@
+set (DEBUG_SYMBOL_SUFFIX ds)
 set(SYMBOLS_BINARY_PATH ${CMAKE_BINARY_DIR}/symbols)
 file(MAKE_DIRECTORY ${SYMBOLS_BINARY_PATH})
 function (create_ds target)
