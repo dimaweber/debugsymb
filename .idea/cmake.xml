@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSharedSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
+      <configuration PROFILE_NAME="RelWithDebInfo" ENABLED="true" CONFIG_NAME="RelWithDebInfo" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
+      <configuration PROFILE_NAME="clang-Debug" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="x86-clang-17" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
+      <configuration PROFILE_NAME="clang-Release" ENABLED="true" CONFIG_NAME="RelWithDebInfo" TOOLCHAIN_NAME="x86-clang-17" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
+    </configurations>
+  </component>
+</project>

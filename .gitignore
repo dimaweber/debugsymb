@@ -1,3 +1,9 @@
+# build directories
 cmake-build-*
 build/
+
+# installed binaries
 out/
+
+# IDE
+.idea
