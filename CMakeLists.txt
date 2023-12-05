@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.16)
+project(debugsymb LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+
+set (DEBUG_SYMBOL_SUFFIX ds)
+
+include(GNUInstallDirs)
+set(CMAKE_INSTALL_BINDIR out/bin)
+set(CMAKE_INSTALL_LIBDIR out/lib)
+set(CMAKE_INSTALL_INFODIR out/sym)
+
+set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
+include_directories(src/inc)
+
+add_subdirectory(src/app)
+add_subdirectory(src/lib)

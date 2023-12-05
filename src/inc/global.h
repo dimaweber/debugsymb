@@ -1,0 +1,1 @@
+int* globalFunc (int v );
