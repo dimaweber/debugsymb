@@ -1,4 +1,3 @@
-#include <format>
 #include <iostream>
 
 #include "class.h"
@@ -20,7 +19,7 @@ void A::run( )
 {
     using namespace std;
     cout << "run execution\n";
-    while ( true ) {
+    for ( int i = 0; i < 10; i++ ) {
         step( );
     }
     cout << "run execution done\n";
@@ -30,6 +29,6 @@ void A::step( )
 {
     using namespace std;
     stepsCount++;
-    cout << format("executing step {}\n", stepsCount);
+    cout << "executing step " << stepsCount << "\n";
     globalFunc(stepsCount);
 }

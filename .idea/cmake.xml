@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CMakeSharedSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
-      <configuration PROFILE_NAME="RelWithDebInfo" ENABLED="true" CONFIG_NAME="RelWithDebInfo" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
-      <configuration PROFILE_NAME="clang-Debug" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="x86-clang-17" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
-      <configuration PROFILE_NAME="clang-Release" ENABLED="true" CONFIG_NAME="RelWithDebInfo" TOOLCHAIN_NAME="x86-clang-17" GENERATION_OPTIONS="-DCMAKE_PREFIX_INSTALL=$CMakeProjectDir$" />
+      <configuration PROFILE_NAME="Debug-MinGW" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW" GENERATION_OPTIONS="-DCMAKE_INSTALL_PREFIX=$CMakeProjectDir$" BUILD_OPTIONS="-j 16" />
+      <configuration PROFILE_NAME="RelWithDebInfo-MinGW" ENABLED="true" CONFIG_NAME="RelWithDebInfo" TOOLCHAIN_NAME="MinGW" GENERATION_OPTIONS="-DCMAKE_INSTALL_PREFIX=$CMakeProjectDir$" />
+      <configuration PROFILE_NAME="clang-Debug" ENABLED="false" CONFIG_NAME="Debug" TOOLCHAIN_NAME="x86-clang-17" GENERATION_OPTIONS="-DCMAKE_INSTALL_PREFIX=$CMakeProjectDir$" />
+      <configuration PROFILE_NAME="clang-Release" ENABLED="false" CONFIG_NAME="RelWithDebInfo" TOOLCHAIN_NAME="x86-clang-17" GENERATION_OPTIONS="-DCMAKE_INSTALL_PREFIX=$CMakeProjectDir$" />
     </configurations>
   </component>
 </project>
